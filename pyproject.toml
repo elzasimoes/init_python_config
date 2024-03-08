@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "init-python-configuration"
+version = "0.1.0"
+description = ""
+authors = ["elza <elzaesimoes@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+taskipy = "^1.12.2"
+flake8 = "^7.0.0"
+black = "^24.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+test = "python -m unittest tests/test_*.py"
+lint_flake = "flake8 init_python_configuration"
+lint_black = "black --check init_python_configuration"
