@@ -21,6 +21,9 @@ jobs:
         export PATH="$HOME/.poetry/bin:$PATH"
         poetry install
 
+    - name: Add Poetry to PATH
+      run: echo "::add-path::$(poetry config bin -n --no-interaction)"
+
     - name: Run linting script
       run: |
         task lint_flake
