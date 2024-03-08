@@ -10,6 +10,10 @@ python = "^3.11"
 taskipy = "^1.12.2"
 flake8 = "^7.0.0"
 black = "^24.2.0"
+mkdocs = "^1.5.3"
+mkdocs-material = "^9.5.13"
+mkdocs-macros-plugin = "^1.0.5"
+mkdocstrings-python = "^1.8.0"
 
 
 [build-system]

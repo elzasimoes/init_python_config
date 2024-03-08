@@ -1,0 +1,14 @@
+# mkdocs.yml
+site_name: Calculation Docs
+
+theme:
+  name: "material"
+
+watch:
+   - init_python_configuration
+
+plugins:
+- mkdocstrings:
+    handlers:
+      python:
+        paths: [init_python_configuration]
