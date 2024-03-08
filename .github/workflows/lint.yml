@@ -1,6 +1,6 @@
-name: Lint
+name: Run Lint
 
-on: [pull_request]
+on: [push]
 
 jobs:
   lint:
