@@ -20,11 +20,7 @@ jobs:
         curl -sSL https://install.python-poetry.org | python3 -
         export PATH="$HOME/.poetry/bin:$PATH"
         poetry install
-    
-    - name: Get modified files
-      id: get_files
-      run: echo "::set-output name=files::$(git diff --name-only ${{ github.base_ref }})"
 
     - name: Run linting script
       run: |
-        flake8 ${{ steps.get_files.outputs.files }}
+        task lint_flake
